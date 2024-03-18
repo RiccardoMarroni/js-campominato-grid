@@ -1,12 +1,27 @@
+document.quarySelector('button#play-button').addEventListener('click', function() {
+    const cellnumber = parseInt (document.quaryselector('select#play-select').value);
+    newgame (cellnumber)
+})
 
 
-
-function newgame(){
+function newgame(numberofsquares){
   const grid = document.getElementById('grid');
     grid.innerHTML;
 
-    const newsquare = document.createElement('article')
-    newsquare.classList.add('square')
+    for (let index = 0; index < numberofsquares; index++) {
+        const newsquare = document.createElement('article');
+        if (numberofsquares === 81){
+           newsquare.classList.add('square','medium');
+           else if (numberofsquares === 49){
+            newsquare.classList.add('square','hard');
+           }
+           else {
+            newsquare.classList.add('square');
+           }
+        }
+        
+    }
+    
     newsquare.addEventListener('click' , function(){
         newsquare.classList.toggle('clicked')
     })
