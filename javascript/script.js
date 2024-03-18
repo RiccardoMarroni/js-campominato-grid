@@ -66,3 +66,33 @@ function generateSquare(number) {
 //     newsquare.appendChild(spancontent);
 //     grid.appendChild(newsquare)
 // }
+
+
+
+// generare numero random fuori dall'array
+
+const list = [1,2,3,5,6,8,10]
+generateUniqueRandomNumber (1, 10, list)
+
+function generateUniqueRandomNumber (min, max, blacklist){
+    let isFound = false;
+    let randomNumber;
+
+    while(!isFound){
+
+        if (!blacklist.includes(randomNumber)){
+            isFound = true;
+        }
+    }
+
+    return randomNumber;
+}
+
+
+
+
+
+function getRndInteger(mininum , maxinum) {
+    return Math.floor(Math.random() * (maxinum - mininum+ 1) ) + min;
+}
+
